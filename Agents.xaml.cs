@@ -1,28 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Poprygunchic
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class Agents : Window
     {
-        public MainWindow()
+        public Agents()
         {
             InitializeComponent();
+            agentsListView.ItemsSource = PoprygunchicEntities.GetContext().Agents.ToList();
+           
+        }
+
+        private List<string> SetLogoAgent()
+        {
+            var logo = PoprygunchicEntities.GetContext().Agents.ToList();
+            List<string> pathLogo = new List<string>();
+
+            for (int i = 0; i < logo.Count; i++)
+            {
+                if (logo[i].Logo == "отсутствует")
+                    pathLogo.Add ("/Resources/picture.png");
+                else
+                    pathLogo.Add (@"\Resources" + logo[i].Logo);
+            }
+
+            return pathLogo;
         }
     }
 }
