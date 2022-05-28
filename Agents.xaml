@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Poprygunchic" xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Agents" Height="450" Width="800">
+        Title="Agents" Height="450" Width="800" MinHeight="450" MinWidth="800">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -13,11 +13,11 @@
             <RowDefinition Height="12*"/>
         </Grid.RowDefinitions>
 
-        <Viewbox HorizontalAlignment="Left" Stretch="Uniform" Margin="5" MaxHeight="40">
+        <Viewbox HorizontalAlignment="Left" Stretch="Uniform" Margin="5" MaxHeight="30">
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="searchTextBox" ToolTip="Введите для поиска" Margin="15 0 40 0" Width="150" FontSize="14" FontFamily="Comic Sans MS"/>
-                <ComboBox x:Name="sortComboBox" ToolTip="Сортировка" Margin="0 0 40 0" Width="100" FontSize="14" FontFamily="Comic Sans MS"/>
-                <ComboBox x:Name="filterComboBox" ToolTip="Фильтрация" Margin="0 0 40 0" Width="100" FontSize="14" FontFamily="Comic Sans MS"/>
+                <TextBox x:Name="searchTextBox" ToolTip="Введите для поиска" Margin="15 0 40 0" Width="250" FontSize="14" FontFamily="Comic Sans MS"/>
+                <ComboBox x:Name="sortComboBox" SelectionChanged="SortComboBoxSelectionChanged" ToolTip="Сортировка" Margin="0 0 40 0" Width="180" FontSize="14" FontFamily="Comic Sans MS"/>
+                <ComboBox x:Name="filterComboBox" ToolTip="Фильтрация" Margin="0 0 40 0" Width="180" FontSize="14" FontFamily="Comic Sans MS"/>
             </StackPanel>
         </Viewbox>
 
@@ -27,7 +27,7 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
-                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="8*"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Image Width="100" Source="{Binding Logo}"/>
