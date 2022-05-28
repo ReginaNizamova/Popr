@@ -15,20 +15,14 @@ namespace Poprygunchic
            
         }
 
-        private List<string> SetLogoAgent()
-        {
-            var logo = PoprygunchicEntities.GetContext().Agents.ToList();
-            List<string> pathLogo = new List<string>();
+        //private void Pages()
+        //{
+        //    var agents = PoprygunchicEntities.GetContext().Agents.ToList();
 
-            for (int i = 0; i < logo.Count; i++)
-            {
-                if (logo[i].Logo == "отсутствует")
-                    pathLogo.Add ("/Resources/picture.png");
-                else
-                    pathLogo.Add (@"\Resources" + logo[i].Logo);
-            }
+        //    List<Agent> tenAgents = new List<Agent>();
 
-            return pathLogo;
-        }
+        //    if (agents.Count > 10)
+        //        tenAgents.Add(agents.Skip(10).ToList());
+        //}
     }
 }

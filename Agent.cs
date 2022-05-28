@@ -11,7 +11,8 @@ namespace Poprygunchic
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Linq;
+
     public partial class Agent
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -33,7 +34,23 @@ namespace Poprygunchic
         public string Email { get; set; }
         public string Logo { get; set; }
         public int Priority { get; set; }
-    
+
+        static DateTime firstDate = Convert.ToDateTime("2019.01.01");
+        static DateTime lastDate = Convert.ToDateTime("2019.12.31");
+
+        public int ProductCountForLastYear
+        {
+            get
+            {
+                return PoprygunchicEntities.GetContext().ProductSales.Where(x => x.SaleDate > firstDate && x.SaleDate < lastDate && x.AgentID == this.ID).Select(x => x.ProductCount).FirstOrDefault();
+            }
+
+            set
+            {
+
+            }
+        }
+
         public virtual AgentType AgentType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AgentPriorityHistory> AgentPriorityHistories { get; set; }

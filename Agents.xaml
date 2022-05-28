@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Poprygunchic"
+        xmlns:local="clr-namespace:Poprygunchic" xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="Agents" Height="450" Width="800">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -31,16 +32,17 @@
                         </Grid.ColumnDefinitions>
                         <Image Width="100" Source="{Binding Logo}"/>
                         <TextBlock Grid.Column="1" Margin="100 0 0 20" FontSize="14" FontFamily="Comic Sans MS">
-                            <Run Text="{Binding AgentType.Title, StringFormat={} | }"/> 
+                            <Run Text="{Binding AgentType.TitleWithLine}"/> 
                             <Run Text="{Binding Title}"/>
-                            <Run Text="{Binding ProductSales.ProductCount, StringFormat={} продаж за год}"/>
+                            <LineBreak/>
+                            <Run Text="{Binding ProductCountForLastYear, StringFormat={}{0} продаж за год}"/>
                             <LineBreak/>
                             <Run Text="{Binding Phone}"/>
                             <LineBreak/>
                             <Run Text="{Binding Priority, StringFormat=Приоритетность: {0}}"/>
                         </TextBlock>
                         <TextBlock Grid.Column="2" HorizontalAlignment="Right">
-                            <Run Text="{Binding Percent, StringFormat={}%}"/>
+                            <Run Text="{Binding Percent, StringFormat={}{0:P}}"/>
                         </TextBlock>
                     </Grid>
                 </DataTemplate>

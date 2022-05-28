@@ -11,7 +11,7 @@ namespace Poprygunchic
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class ProductSale
     {
         public int ID { get; set; }
@@ -19,7 +19,7 @@ namespace Poprygunchic
         public int ProductID { get; set; }
         public System.DateTime SaleDate { get; set; }
         public int ProductCount { get; set; }
-    
+
         public virtual Agent Agent { get; set; }
         public virtual Product Product { get; set; }
     }

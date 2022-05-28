@@ -23,7 +23,21 @@ namespace Poprygunchic
         public int ID { get; set; }
         public string Title { get; set; }
         public string Image { get; set; }
-    
+
+        public string TitleWithLine
+        {
+            get
+            {
+                return this.Title + " | ";
+            }
+
+            set
+            {
+
+            }
+        }
+
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Agent> Agents { get; set; }
     }
