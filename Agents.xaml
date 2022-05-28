@@ -27,7 +27,7 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
-                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="4*"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Image Width="100" Source="{Binding Logo}"/>
@@ -41,8 +41,8 @@
                             <LineBreak/>
                             <Run Text="{Binding Priority, StringFormat=Приоритетность: {0}}"/>
                         </TextBlock>
-                        <TextBlock Grid.Column="2" HorizontalAlignment="Right">
-                            <Run Text="{Binding Percent, StringFormat={}{0:P}}"/>
+                        <TextBlock Grid.Column="2" HorizontalAlignment="Right"  FontSize="14" FontFamily="Comic Sans MS">
+                            <Run Text="{Binding PersentCount, StringFormat= {}{0} %}"/>
                         </TextBlock>
                     </Grid>
                 </DataTemplate>

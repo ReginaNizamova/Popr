@@ -51,6 +51,33 @@ namespace Poprygunchic
             }
         }
 
+        public int PersentCount
+        { 
+            get
+            {
+                var sum = Convert.ToInt32(this.ProductSales.Select(x => x.ProductCount).FirstOrDefault() * this.ProductSales.Select(x => x.Product.MinCostForAgent).FirstOrDefault());
+                int percent = 0;
+
+                if (sum >= 0 && sum < 10000)
+                    percent = 0;
+                else if (sum >= 10000 && sum < 50000)
+                    percent = 5;
+                else if (sum >= 50000 && sum < 150000)
+                    percent = 10;
+                else if (sum >= 150000 && sum < 500000)
+                    percent = 20;
+                else if (sum >= 500000)
+                    percent = 25;
+                return percent;
+            }
+
+            set
+            {
+
+            }
+        }
+
+
         public virtual AgentType AgentType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AgentPriorityHistory> AgentPriorityHistories { get; set; }
