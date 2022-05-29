@@ -15,9 +15,9 @@
 
         <Viewbox HorizontalAlignment="Left" Stretch="Uniform" Margin="5" MaxHeight="30">
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="searchTextBox" ToolTip="Введите для поиска" Margin="15 0 40 0" Width="250" FontSize="14" FontFamily="Comic Sans MS"/>
+                <TextBox x:Name="searchTextBox" TextChanged="SearchTextBoxTextChanged" ToolTip="Введите для поиска" Margin="15 0 40 0" Width="250" FontSize="14" FontFamily="Comic Sans MS"/>
                 <ComboBox x:Name="sortComboBox" SelectionChanged="SortComboBoxSelectionChanged" ToolTip="Сортировка" Margin="0 0 40 0" Width="180" FontSize="14" FontFamily="Comic Sans MS"/>
-                <ComboBox x:Name="filterComboBox" ToolTip="Фильтрация" Margin="0 0 40 0" Width="180" FontSize="14" FontFamily="Comic Sans MS"/>
+                <ComboBox x:Name="filterComboBox" SelectionChanged="FilterComboBoxSelectionChanged" ToolTip="Фильтрация" Margin="0 0 40 0" Width="180" FontSize="14" FontFamily="Comic Sans MS"/>
             </StackPanel>
         </Viewbox>
 
@@ -41,7 +41,7 @@
                             <LineBreak/>
                             <Run Text="{Binding Priority, StringFormat=Приоритетность: {0}}"/>
                         </TextBlock>
-                        <TextBlock Grid.Column="2" HorizontalAlignment="Right"  FontSize="14" FontFamily="Comic Sans MS">
+                        <TextBlock Grid.Column="2" HorizontalAlignment="Right"  FontSize="14" FontWeight="DemiBold" FontFamily="Comic Sans MS">
                             <Run Text="{Binding PersentCount, StringFormat= {}{0} %}"/>
                         </TextBlock>
                     </Grid>
