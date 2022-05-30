@@ -38,7 +38,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Попрыженок.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -114,7 +115,11 @@
     <Compile Include="Supplier.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Page Include="Agents.xaml">
+    <Page Include="Windows\AddWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Agents.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -122,7 +127,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Agents.xaml.cs">
+    <Compile Include="Windows\AddWindow.xaml.cs">
+      <DependentUpon>AddWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Agents.xaml.cs">
       <DependentUpon>Agents.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -310,9 +318,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\picture.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Попрыженок.ico" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model.Context.tt">

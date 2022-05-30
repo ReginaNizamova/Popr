@@ -1,5 +1,4 @@
 C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Poprygunchic.csprojAssemblyReference.cache
-C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Agents.g.cs
 C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\App.g.cs
 C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Poprygunchic_Content.g.cs
 C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Poprygunchic_MarkupCompile.cache
@@ -11,7 +10,6 @@ C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\bin\Debug\EntityFramewo
 C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\bin\Debug\EntityFramework.xml
 C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Agents.baml
 C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Poprygunchic.g.resources
 C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Poprygunchic.Properties.Resources.resources
 C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Poprygunchic.csproj.GenerateResource.cache
@@ -19,3 +17,7 @@ C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Poprygunchic.
 C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Poprygunchic.csproj.CopyComplete
 C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Poprygunchic.exe
 C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Poprygunchic.pdb
+C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Windows\AddWindow.g.cs
+C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Windows\Agents.g.cs
+C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Windows\AddWindow.baml
+C:\Users\User\Desktop\2021 Попрыгун\Poprygunchic\obj\Debug\Windows\Agents.baml

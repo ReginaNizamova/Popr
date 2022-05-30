@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Poprygunchic.Windows;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -115,5 +116,17 @@ namespace Poprygunchic
             view.Filter = AgentSearch;
             CollectionViewSource.GetDefaultView(agentsListView.ItemsSource).Refresh();
         }   
+
+        private void EditButtonClick(object sender, RoutedEventArgs e) // Добавление / Редактирование агентов
+        {
+            AddWindow window = new AddWindow((sender as Button).DataContext as Agent);
+            window.ShowDialog();
+            
+            if(window.Visibility != Visibility.Visible)
+            {
+                PoprygunchicEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(x => x.Reload());
+                agentsListView.ItemsSource = PoprygunchicEntities.GetContext().Agents.ToList();
+            }
+        }
     }
 }
